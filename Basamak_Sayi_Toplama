@@ -1,0 +1,22 @@
+package Giris;
+import java.util.Scanner;
+public class Basamak_Sayi_Toplama {
+    public static void main(String[] args) {
+
+        int a,b,c=1,lastvalue = 10,total=0;
+
+        System.out.print("Lütfen bir sayı giriniz : ");
+        Scanner input = new Scanner(System.in);
+        a = input.nextInt();
+
+        do {
+            b = a % lastvalue;
+            System.out.println(c+ " Basamak = " +b);
+            a = a / 10;
+            total = total + b;
+            c= c + 1;
+
+        }while (a != 0);
+        System.out.print("Basamakların toplamı = " +total);
+    }
+}
